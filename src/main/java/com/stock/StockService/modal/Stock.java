@@ -1,16 +1,22 @@
 package com.stock.StockService.modal;
 
-public class Stock {
+import java.io.Serializable;
+
+public class Stock implements Serializable {
 	
-	private String id;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8686728338668498294L;
+	private int id;
 	private String description;
 	private Long value;
 	private String date;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getDescription() {
@@ -25,7 +31,7 @@ public class Stock {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	public Stock(String id, String description, Long value, String date) {
+	public Stock(int id, String description, Long value, String date) {
 		super();
 		this.id = id;
 		this.description = description;
